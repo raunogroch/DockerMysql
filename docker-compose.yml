@@ -12,7 +12,7 @@ services:
     volumes:
       - ./schemas:/var/lib/mysql:rw
     networks:
-      mysql_network:
+      loaclhost:
         aliases:
           - mysql_localhost
 
@@ -20,6 +20,6 @@ volumes:
   schemas: {}
 
 networks:
-  mysql_network:
+  loaclhost:
     name: mysql_net
     driver: bridge
